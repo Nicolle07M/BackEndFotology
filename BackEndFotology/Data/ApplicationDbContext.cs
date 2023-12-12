@@ -19,5 +19,6 @@ namespace BackEndFotology.Data
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Calificacion> Calificaciones { get; set; }
         public DbSet<Comentario> Comentarios { get; set; }
+        
     }
 }

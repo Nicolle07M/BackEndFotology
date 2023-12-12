@@ -1,7 +1,10 @@
-﻿namespace BackEndFotology.Modelos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BackEndFotology.Modelos
 {
     public class Fotografo
     {
+        [Key]
         public int IDfotografo { get; set; }
         public string NombreFotografo { get; set; }
         public string FotoDePerfil { get; set; }

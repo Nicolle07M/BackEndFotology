@@ -1,10 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BackEndFotology.Modelos
 {
     public class Fotografia
     {
-        public string IDfotografia { get; set; }
+        [Key]
+        public int IDfotografia { get; set; }
         public string Titulo { get; set; }
         public string Descripcion { get; set; }
         [ForeignKey("IDcategoria")]
