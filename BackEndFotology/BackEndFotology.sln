@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackEndFotology", "BackEndFotology\BackEndFotology.csproj", "{526E9AD0-3690-4932-A5DA-3C3F30198D60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{526E9AD0-3690-4932-A5DA-3C3F30198D60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{526E9AD0-3690-4932-A5DA-3C3F30198D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{526E9AD0-3690-4932-A5DA-3C3F30198D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{526E9AD0-3690-4932-A5DA-3C3F30198D60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE073753-DF07-4CA8-9C92-FE06AD77D171}
+	EndGlobalSection
+EndGlobal
