@@ -7,7 +7,7 @@ namespace BackEndFotology.Modelos
         [Key]
         public int IDcalificacion { get; set; }
         public int CalificacionValor { get; set; }
-        public string IDfotografia { get; set; }
+        public int IDfotografia { get; set; }
     }
 
 }
