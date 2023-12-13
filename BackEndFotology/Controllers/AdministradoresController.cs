@@ -3,7 +3,7 @@ using BackEndFotology.Modelos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Data.Entity;
+
 
 namespace ProyectApi.Controllers
 {
@@ -19,7 +19,7 @@ namespace ProyectApi.Controllers
             this._context = context;
         }
 
-        // GET: api/<CustomersController>
+        // GET: api/<AdminstradoresController>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Administrador>>> Get()
         {
@@ -32,8 +32,8 @@ namespace ProyectApi.Controllers
 
         }
 
-        // GET api/<SuppliersController>/5
-        [HttpGet("{id}")] // Variables de ruta  https://localhost:7030/api/suppliers/5 
+        // GET api/<AdministradoresController>/5
+        [HttpGet("{id}")] // Variables de ruta  https://localhost:7030/api/administradores/5 
         public async Task<ActionResult<Administrador>> Get(int id)
         {
 
@@ -78,7 +78,7 @@ namespace ProyectApi.Controllers
             try
             {
                 _context.Attach(administrador);
-                _context.Entry(administrador).State = (Microsoft.EntityFrameworkCore.EntityState)System.Data.Entity.EntityState.Modified;
+                _context.Entry(administrador).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException ex)

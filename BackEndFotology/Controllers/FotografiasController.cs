@@ -21,27 +21,27 @@ namespace ProyectApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Fotografia>>> Get()
         {
-            if (_context.Fotografia == null)
+            if (_context.Fotografias == null)
             {
                 return NotFound();
             }
 
-            return await _context.Fotografia.ToListAsync();
+            return await _context.Fotografias.ToListAsync();
 
         }
 
         // GET api/<FotografiasController>/5
-        [HttpGet("{id}")] // Variables de ruta  https://localhost:7030/api/suppliers/5 
-        public async Task<ActionResult<Fotografo>> Get(int id)
+        [HttpGet("{id}")] // Variables de ruta  https://localhost:7030/api/fotografias/5 
+        public async Task<ActionResult<Fotografia>> Get(int id)
         {
 
-            if (_context.Fotografia == null
+            if (_context.Fotografias == null
 )
             {
                 return NotFound();
             }
 
-            var fotografia = await _context.Fotografia.FindAsync(id);
+            var fotografia = await _context.Fotografias.FindAsync(id);
 
             if (fotografia is null)
             {
@@ -53,13 +53,13 @@ namespace ProyectApi.Controllers
 
         // POST api/<FotografiasController>
         [HttpPost]
-        public async Task<ActionResult<Fotografo>> Post([FromBody] Fotografia fotografia)
+        public async Task<ActionResult<Fotografia>> Post([FromBody] Fotografia fotografia)
         {
-            if (_context.Fotografia == null)
+            if (_context.Fotografias == null)
             {
-                return Problem("Entity set 'ApplicationDbContext.Fotografos'  is null.");
+                return Problem("Entity set 'ApplicationDbContext.Fotografias'  is null.");
             }
-            _context.Fotografos.Add(fotografia);
+            _context.Fotografias.Add(fotografia);
             await _context.SaveChangesAsync();
             return CreatedAtAction("Get", new { id = fotografia.IDfotografia }, fotografia);
         }
@@ -95,7 +95,7 @@ namespace ProyectApi.Controllers
 
         private bool FotografiaExists(int id)
         {
-            return (_context.Fotografia?.Any(c => c.IDfotografia == id)).GetValueOrDefault();
+            return (_context.Fotografias?.Any(c => c.IDfotografia == id)).GetValueOrDefault();
         }
 
 
@@ -103,18 +103,18 @@ namespace ProyectApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            if (_context.Fotografia is null)
+            if (_context.Fotografias is null)
             {
                 return NotFound();
             }
 
-            var fotografia = await _context.Fotografia.FirstOrDefaultAsync(c => c.IDfotografia == id);
+            var fotografia = await _context.Fotografias.FirstOrDefaultAsync(c => c.IDfotografia == id);
             if (fotografia == null)
             {
                 return NotFound();
             }
 
-            _context.Fotografia.Remove(fotografia);
+            _context.Fotografias.Remove(fotografia);
             await _context.SaveChangesAsync();
             return NoContent();
 
