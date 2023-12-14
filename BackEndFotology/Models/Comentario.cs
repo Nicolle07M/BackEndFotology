@@ -7,9 +7,13 @@ namespace BackEndFotology.Modelos
     {
         [Key]
         public int IDcomentario { get; set; }
+
+        [ForeignKey("Fotografia")]
         public int IDfotografia { get; set; }
-        [ForeignKey("IDcliente")]
+
+        [ForeignKey("Cliente")]
         public int IDcliente { get; set; }
+
         public DateTime? FechaComentario { get; set; }
     }
 }

@@ -7,8 +7,10 @@ namespace BackEndFotology.Modelos
     {
         [Key]
         public int IDportafolio { get; set; }
-        [ForeignKey("IDfotografo")]
+
+        [ForeignKey("Fotografo")]
         public int IDfotografo { get; set; }
+
         public string NombrePortafolio { get; set; }
     }
 

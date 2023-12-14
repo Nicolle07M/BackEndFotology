@@ -9,12 +9,18 @@ namespace BackEndFotology.Modelos
         public int IDfotografia { get; set; }
         public string Titulo { get; set; }
         public string Descripcion { get; set; }
-        [ForeignKey("IDcategoria")]
+
+        [ForeignKey("Categoria")]
         public string IDcategoria { get; set; }
-        [ForeignKey("IDfotografo")]
+  
+
+        [ForeignKey("Fotografo")]
         public int IDfotografo { get; set; }
-        [ForeignKey("IDcalificacion")]
+      
+
+        [ForeignKey("Calificacion")]
         public int IDcalificacion { get; set; }
+     
     }
 
 }
